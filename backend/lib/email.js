@@ -52,11 +52,11 @@ function logo() {
     <table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom:28px">
       <tr>
         <td align="center">
-          <img src="https://files.gifted.co.ke/image/u2wvoimage.jpg"
-               alt="Gifted Monitor" width="56" height="56"
+          <img src="https://i.ibb.co/FLk9J420/placeholder-logo.png"
+               alt="Hostify Monitor" width="56" height="56"
                style="border-radius:50%;display:block;border:2px solid #10b981;margin:0 auto 10px;object-fit:cover" />
           <p style="margin:0;font-size:17px;font-weight:700;font-family:Arial,sans-serif">
-            <span style="color:#10b981">Gifted</span><span style="color:#111"> Monitor</span>
+            <span style="color:#10b981">Hostify</span><span style="color:#111"> Monitor</span>
           </p>
         </td>
       </tr>
@@ -77,8 +77,8 @@ function emailWrapper(content) {
         <table cellpadding="0" cellspacing="0" border="0" width="100%" style="margin-top:32px;border-top:1px solid #e5e7eb;padding-top:20px">
           <tr>
             <td style="font-size:12px;color:#9ca3af;text-align:center">
-              &copy; ${yearStr} Gifted Monitor &middot; <a href="https://monitor.gifted.co.ke" style="color:#10b981;text-decoration:none">monitor.gifted.co.ke</a><br>
-              You are receiving this because you have an account with Gifted Monitor.
+              &copy; ${yearStr} Hostify Monitor &middot; <a href="https://monitor.top.co.zw" style="color:#10b981;text-decoration:none">monitor.top.co.zw</a><br>
+              You are receiving this because you have an account with Hostify Monitor.
             </td>
           </tr>
         </table>
@@ -93,7 +93,7 @@ async function sendVerificationLink(to, purpose, link) {
   const isReset = purpose === "reset";
   const isEmailChange = purpose === "email_change";
   const subject = isReset
-    ? "Reset your Gifted Monitor password"
+    ? "Reset your Hostify Monitor password"
     : isEmailChange
     ? "Confirm your new email address — Gifted Monitor"
     : "Verify your Gifted Monitor account";
@@ -216,7 +216,7 @@ async function sendSiteRecovered(to, userName, monitorName, url, responseTime, d
 
 async function sendWelcome(to, userName) {
   const html = emailWrapper(`
-    <h2 style="font-size:20px;font-weight:700;color:#111;margin:0 0 8px">Welcome to Gifted Monitor! 🎉</h2>
+    <h2 style="font-size:20px;font-weight:700;color:#111;margin:0 0 8px">Welcome to Hostify Monitor! 🎉</h2>
     <p style="color:#6b7280;margin:0 0 16px;font-size:14px">Hi ${userName}, your account is verified and ready to use.</p>
     <p style="color:#6b7280;margin:0 0 20px;font-size:14px">Get started by adding your first monitor — it takes less than a minute.</p>
     <table cellpadding="0" cellspacing="0" border="0" width="100%" style="margin-bottom:16px">
@@ -228,8 +228,8 @@ async function sendWelcome(to, userName) {
     </table>
     <p style="color:#9ca3af;font-size:12px;margin:0">Need help? Reply to this email or visit our <a href="${config.FRONTEND_URL}/contact" style="color:#10b981;text-decoration:none">contact page</a>.</p>
   `);
-  const text = `Welcome to Gifted Monitor, ${userName}!\n\nYour account is ready. Add your first monitor: ${config.FRONTEND_URL}/monitors/new`;
-  await sendMail({ to, subject: "Welcome to Gifted Monitor — you're all set!", html, text });
+  const text = `Welcome to Hostify Monitor, ${userName}!\n\nYour account is ready. Add your first monitor: ${config.FRONTEND_URL}/monitors/new`;
+  await sendMail({ to, subject: "Welcome to Hostify Monitor — you're all set!", html, text });
 }
 
 function formatDuration(ms) {
