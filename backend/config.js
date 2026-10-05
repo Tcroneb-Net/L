@@ -17,11 +17,11 @@ module.exports = {
   RESEND4_DOMAIN:  process.env.RESEND4_DOMAIN  || "",
   RESEND5_API_KEY: process.env.RESEND5_API_KEY || "",
   RESEND5_DOMAIN:  process.env.RESEND5_DOMAIN  || "",
-  EMAIL_FROM_NAME: process.env.EMAIL_FROM_NAME || "Gifted Monitor",
-  FRONTEND_URL: process.env.FRONTEND_URL || "https://monitor.gifted.co.ke",
+  EMAIL_FROM_NAME: process.env.EMAIL_FROM_NAME || "Hostify Monitor",
+  FRONTEND_URL: process.env.FRONTEND_URL || "https://monitor.top.co.zw",
   PING_CHECK_INTERVAL_SECS: parseInt(process.env.PING_CHECK_INTERVAL_SECS || "10"),
   MIN_PING_INTERVAL_MINS: 0.5,
   TIMEZONE: process.env.TIMEZONE || "Africa/Nairobi",
-  ALLOWED_ORIGINS: (process.env.ALLOWED_ORIGINS || "http://localhost:3000")
+  ALLOWED_ORIGINS: (process.env.ALLOWED_ORIGINS || "https://monitor.top.co.zw")
     .split(",").map((o) => o.trim()),
 };
