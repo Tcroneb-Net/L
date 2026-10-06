@@ -1,6 +1,6 @@
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { Link } from "react-router-dom";
-import { Plus, Activity, TrendingUp, AlertTriangle, Clock, RefreshCw } from "lucide-react";
+import { Plus, Activity, TrendingUp, AlertTriangle, Clock, RefreshCw, ArrowUpRight, ShieldCheck } from "lucide-react";
 import { AppLayout } from "@/layouts";
 import { MonitorCard } from "@/components/main";
 import { Breadcrumb } from "@/components/ui";
@@ -46,24 +46,26 @@ export default function Dashboard() {
     <AppLayout>
       <div className="space-y-6">
         <Breadcrumb crumbs={[{ label: "Dashboard" }]} />
+        <section className="relative overflow-hidden rounded-2xl bg-slate-950 p-6 text-white shadow-xl shadow-slate-950/10 dark:bg-slate-900">
+          <div className="absolute -right-16 -top-20 size-56 rounded-full bg-violet-500/20 blur-3xl" />
+          <div className="relative flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
+            <div>
+              <div className="mb-3 flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-cyan-300"><ShieldCheck size={15} /> Operations overview</div>
+              <h1 className="text-2xl font-bold font-outfit sm:text-3xl">Good to see you, {user?.name?.split(" ")[0] || "there"}.</h1>
+              <p className="mt-2 max-w-xl text-sm text-slate-300">Keep every customer-facing service healthy with Hostify Monitor.</p>
+            </div>
+            <div className="flex gap-2">
+              <button onClick={() => qc.invalidateQueries({ queryKey: ["monitors"] })} disabled={isFetching} className="btn h-10 rounded-xl border border-white/15 bg-white/10 px-3 text-sm text-white hover:bg-white/15" title="Refresh monitors"><RefreshCw size={15} className={isFetching ? "animate-spin" : ""} /> Refresh</button>
+              <Link to="/monitors/new" className="btn h-10 rounded-xl bg-cyan-400 px-4 text-sm font-semibold text-slate-950 hover:bg-cyan-300"><Plus size={16} /> New monitor</Link>
+            </div>
+          </div>
+        </section>
         <div className="flex items-center justify-between">
           <div>
-            <h1 className="text-xl font-bold font-outfit">Dashboard</h1>
-            <p className="text-sm text-muted">Welcome back, {user?.name?.split(" ")[0]}</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-muted">Service health</p>
+            <h2 className="mt-1 text-lg font-bold font-outfit">Your monitored services</h2>
           </div>
-          <div className="flex gap-2">
-            <button
-              onClick={() => qc.invalidateQueries({ queryKey: ["monitors"] })}
-              disabled={isFetching}
-              className="btn h-9 w-9 rounded-xl bg-foreground text-muted hover:text-main transition-colors disabled:opacity-50"
-              title="Refresh"
-            >
-              <RefreshCw size={15} className={isFetching ? "animate-spin" : ""} />
-            </button>
-            <Link to="/monitors/new" className="btn btn-primary h-9 px-4 rounded-xl text-sm gap-2">
-              <Plus size={16} /> New monitor
-            </Link>
-          </div>
+          <Link to="/monitors" className="btn h-9 rounded-xl border border-line bg-background px-3 text-xs font-semibold hover:bg-secondary">View all <ArrowUpRight size={14} /></Link>
         </div>
 
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">

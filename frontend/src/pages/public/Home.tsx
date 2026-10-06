@@ -47,7 +47,7 @@ export default function Home() {
                 className="text-base text-muted leading-relaxed mb-7 max-w-lg"
               >
                 Free hosting services like Render put your app to sleep when idle.{" "}
-                <span className="text-emerald-500 font-semibold">Gifted Monitor pings it at set intervals</span>{" "}
+                <span className="text-emerald-500 font-semibold">Hostify Monitor pings it at set intervals</span>{" "}
                 to keep it awake — and if it ever goes down, you'll get an instant{" "}
                 <span className="text-emerald-500 font-semibold">email alert</span>{" "}
                 so you can fix it before your users even notice.
@@ -87,7 +87,7 @@ export default function Home() {
                 <div>
                   <p className="text-[10px] font-bold">Email Alert</p>
                   <p className="text-[10px] text-red-500 font-medium">⚠ api.example.com is DOWN</p>
-                  <p className="text-[9px] text-muted">Just now · Gifted Monitor</p>
+                  <p className="text-[9px] text-muted">Just now · Hostify Monitor</p>
                 </div>
               </div>
 

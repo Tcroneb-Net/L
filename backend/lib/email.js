@@ -95,8 +95,8 @@ async function sendVerificationLink(to, purpose, link) {
   const subject = isReset
     ? "Reset your Hostify Monitor password"
     : isEmailChange
-    ? "Confirm your new email address — Gifted Monitor"
-    : "Verify your Gifted Monitor account";
+    ? "Confirm your new email address — Hostify Monitor"
+    : "Verify your Hostify Monitor account";
   const heading = isReset ? "Reset Your Password" : isEmailChange ? "Confirm Email Change" : "Verify Your Account";
   const bodyText = isReset
     ? "Click the button below to reset your password. This link expires in <strong>30 minutes</strong>."

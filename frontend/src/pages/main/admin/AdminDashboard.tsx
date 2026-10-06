@@ -48,7 +48,7 @@ export default function AdminDashboard() {
         <div className="flex items-center justify-between">
           <div>
             <h1 className="text-xl font-bold font-outfit">Admin Dashboard</h1>
-            <p className="text-sm text-muted">Overview of your Gifted Monitor instance</p>
+            <p className="text-sm text-muted">Overview of your Hostify Monitor instance</p>
           </div>
           <button
             onClick={() => qc.invalidateQueries({ queryKey: ["admin-stats"] })}
