@@ -5,13 +5,13 @@ const sections = [
   {
     icon: FileText,
     title: "1. Acceptance of Terms",
-    content: "By accessing or using Gifted Monitor (the Service), you agree to be bound by these Terms of Service. If you do not agree, please do not use the Service.",
+    content: "By accessing or using Hostify Monitor (the Service), you agree to be bound by these Terms of Service. If you do not agree, please do not use the Service.",
     aos: "fade-right",
   },
   {
     icon: Shield,
     title: "2. Description of Service",
-    content: "Gifted Monitor provides uptime monitoring for websites and APIs, including email notifications for downtime events. The Service is provided as-is and may change at any time.",
+    content: "Hostify Monitor provides uptime monitoring for websites and APIs, including email notifications for downtime events. The Service is provided as-is and may change at any time.",
     aos: "fade-left",
   },
   {
@@ -35,7 +35,7 @@ const sections = [
   {
     icon: Gavel,
     title: "6. Limitation of Liability",
-    content: "Gifted Monitor and Gifted Tech shall not be liable for any indirect, incidental, special, or consequential damages arising from your use of the Service, including missed downtime alerts.",
+    content: "Hostify Monitor and Gifted Tech shall not be liable for any indirect, incidental, special, or consequential damages arising from your use of the Service, including missed downtime alerts.",
     aos: "fade-left",
   },
   {

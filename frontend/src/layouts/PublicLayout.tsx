@@ -3,6 +3,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { ModeToggle } from "@/components/ui";
+import { BrandMark } from "@/components/ui/BrandMark";
 import { useAuthStore } from "@/store";
 import clsx from "clsx";
 
@@ -70,15 +71,7 @@ export default function PublicLayout({ children }: PublicLayoutProps) {
       <header className="fixed top-0 left-0 right-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-line rounded-b-2xl shadow-sm">
         <div className="main flex items-center justify-between h-14">
           <Link to="/" className="flex items-center gap-2 font-bold text-base font-outfit">
-            <img
-              src="https://files.gifted.co.ke/image/u2wvoimage.jpg"
-              alt="Gifted Monitor"
-              className="w-8 h-8 rounded-full object-cover shrink-0"
-            />
-            <span>
-              <span className="text-emerald-500">Gifted</span>{" "}
-              <span>Monitor</span>
-            </span>
+            <BrandMark />
           </Link>
 
           <nav className="hidden md:flex items-center gap-0.5">
@@ -159,12 +152,7 @@ export default function PublicLayout({ children }: PublicLayoutProps) {
               {/* Drawer header */}
               <div className="flex items-center justify-between px-5 h-14 border-b border-line shrink-0">
                 <Link to="/" onClick={() => setMobileOpen(false)} className="flex items-center gap-2 font-bold text-sm font-outfit">
-                  <img
-                    src="https://files.gifted.co.ke/image/u2wvoimage.jpg"
-                    alt="Gifted Monitor"
-                    className="w-7 h-7 rounded-full object-cover shrink-0"
-                  />
-                  <span><span className="text-emerald-500">Gifted</span> Monitor</span>
+                  <BrandMark />
                 </Link>
                 <button onClick={() => setMobileOpen(false)} className="btn h-8 w-8 rounded-xl bg-foreground shrink-0">
                   <X size={16} />

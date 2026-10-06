@@ -6,6 +6,7 @@ import {
   MessageSquare, LogOut, Menu, X, Shield, ChevronDown
 } from "lucide-react";
 import { ModeToggle } from "@/components/ui";
+import { BrandMark } from "@/components/ui/BrandMark";
 import { useAuthStore } from "@/store";
 import clsx from "clsx";
 
@@ -80,12 +81,7 @@ export default function AppLayout({ children }: AppLayoutProps) {
 
           {/* Logo */}
           <Link to="/dashboard" className="flex items-center gap-2 font-bold text-sm font-outfit shrink-0">
-            <img
-              src="https://files.gifted.co.ke/image/u2wvoimage.jpg"
-              alt="Gifted Monitor"
-              className="w-8 h-8 rounded-full object-cover shrink-0"
-            />
-            <span><span className="text-emerald-500">Gifted</span> Monitor</span>
+            <BrandMark />
           </Link>
 
           {/* Desktop nav links */}
@@ -198,12 +194,7 @@ export default function AppLayout({ children }: AppLayoutProps) {
               {/* Drawer header */}
               <div className="flex items-center justify-between px-5 h-14 border-b border-line shrink-0">
                 <Link to="/dashboard" onClick={() => setMobileOpen(false)} className="flex items-center gap-2 font-bold text-sm font-outfit">
-                  <img
-                    src="https://files.gifted.co.ke/image/u2wvoimage.jpg"
-                    alt="Gifted Monitor"
-                    className="w-7 h-7 rounded-full object-cover shrink-0"
-                  />
-                  <span><span className="text-emerald-500">Gifted</span> Monitor</span>
+                  <BrandMark />
                 </Link>
                 <button onClick={() => setMobileOpen(false)} className="btn h-8 w-8 rounded-xl bg-foreground">
                   <X size={16} />

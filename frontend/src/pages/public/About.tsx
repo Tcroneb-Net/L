@@ -26,7 +26,7 @@ export default function About() {
       <section className="pt-12 pb-10 px-4 text-center">
         <div className="max-w-3xl mx-auto">
           <h1 data-aos="zoom-in" className="text-4xl md:text-5xl font-bold font-outfit mb-4">
-            About <span className="text-emerald-500">Gifted Monitor</span>
+            About <span className="text-emerald-500">Hostify Monitor</span>
           </h1>
           <p data-aos="fade-up" data-aos-delay="120" className="text-muted text-base max-w-xl mx-auto">
             We built the tool we always wished existed — fast, simple uptime monitoring with instant email alerts.
@@ -41,7 +41,7 @@ export default function About() {
           <div data-aos="fade-right" data-aos-duration="600">
             <h2 className="text-2xl font-bold font-outfit mb-3">Who We Are</h2>
             <p className="text-muted leading-relaxed text-sm">
-              Gifted Monitor is a product of{" "}
+              Hostify Monitor is a product of{" "}
               <a href="https://gifted.co.ke" target="_blank" rel="noopener noreferrer" className="text-emerald-500 hover:underline font-medium">
                 Gifted Tech
               </a>{" "}
@@ -61,7 +61,7 @@ export default function About() {
               <span className="text-emerald-500 font-semibold">Everyone has an inbox</span> — and we make sure you see our alerts before anyone else notices the problem.
             </p>
             <p className="text-muted leading-relaxed text-sm">
-              That's the insight behind Gifted Monitor. We send clean, actionable email alerts the moment
+              That's the insight behind Hostify Monitor. We send clean, actionable email alerts the moment
               something goes wrong — so you can act before users even notice.
             </p>
           </div>
@@ -90,7 +90,7 @@ export default function About() {
         <div className="main">
           <div className="text-center mb-10">
             <h2 data-aos="flip-up" className="text-3xl font-bold font-outfit mb-2">What We Stand For</h2>
-            <p data-aos="fade-up" data-aos-delay="100" className="text-muted max-w-xl mx-auto text-sm">Our principles guide how we build and operate Gifted Monitor.</p>
+            <p data-aos="fade-up" data-aos-delay="100" className="text-muted max-w-xl mx-auto text-sm">Our principles guide how we build and operate Hostify Monitor.</p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
             {values.map((v, i) => (

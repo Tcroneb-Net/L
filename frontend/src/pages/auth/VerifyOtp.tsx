@@ -62,9 +62,9 @@ export default function VerifyOtp() {
         setTimeout(() => navigate("/dashboard", { replace: true }), 1200);
       }
     } catch (err: unknown) {
-      const error = err as { response?: { data?: { error?: string } } };
+      const error = err as { response?: { status?: number; data?: { error?: string } } };
       setStatus("error");
-      setErrorMsg(error.response?.data?.error || "Verification failed. The link may have expired.");
+      setErrorMsg(error.response?.status === 429 ? "Too many verification attempts. Please wait a few minutes, then request a fresh link." : error.response?.data?.error || "Verification failed. The link may have expired. Request a new link below.");
     }
   };
 
@@ -93,9 +93,9 @@ export default function VerifyOtp() {
         }
       }
     } catch (err: unknown) {
-      const error = err as { response?: { data?: { error?: string } } };
+      const error = err as { response?: { status?: number; data?: { error?: string } } };
       setStatus("error");
-      setErrorMsg(error.response?.data?.error || "Verification failed. The link may have expired.");
+      setErrorMsg(error.response?.status === 429 ? "Too many verification attempts. Please wait a few minutes, then request a fresh link." : error.response?.data?.error || "Verification failed. The link may have expired. Request a new link below.");
     }
   };
 
