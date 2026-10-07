@@ -1,10 +1,10 @@
 {
-  "name": "Gifted Monitor",
+  "name": "Hostify Monitor",
   "description": "24/7 uptime monitoring SaaS with instant email alerts and a public REST API.",
-  "repository": "https://github.com/mauricegift/gifted-monitor",
-  "logo": "https://files.gifted.co.ke/image/u2wvoimage.jpg",
+  "repository": "https://github.com/Tcroneb-Net/L",
+  "logo": "https://monitor.top.co.zw/hostify-mark.png",
   "keywords": ["uptime", "monitoring", "alerts", "nodejs", "saas"],
-  "website": "https://monitor.gifted.co.ke",
+  "website": "https://monitor.top.co.zw",
   "success_url": "/api/status",
   "addons": [
     {

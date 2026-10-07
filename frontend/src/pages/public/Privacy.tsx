@@ -100,8 +100,8 @@ export default function Privacy() {
                     For privacy questions or data requests, contact us at{" "}
                     <a href="/contact" className="text-emerald-500 hover:underline">our contact page</a>{" "}
                     or email{" "}
-                    <a href="mailto:maurice@gifted.co.ke" className="text-emerald-500 hover:underline">
-                      maurice@gifted.co.ke
+                    <a href="mailto:support@top.co.zw" className="text-emerald-500 hover:underline">
+                      support@top.co.zw
                     </a>.
                   </p>
                 )}

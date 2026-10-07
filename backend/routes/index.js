@@ -8,7 +8,7 @@ router.use('/apikeys',  require('./apikeys'));
 router.use('/v1',       require('./v1'));
 
 router.get('/status', (req, res) => {
-  res.json({ service: 'Gifted Monitor', status: 'running', uptime: Math.floor(process.uptime()) });
+  res.json({ service: 'Hostify Monitor', status: 'running', uptime: Math.floor(process.uptime()) });
 });
 
 router.use('*', (req, res) => {

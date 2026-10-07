@@ -68,7 +68,7 @@ if (fs.existsSync(distPath)) {
 } else {
   // Development mode — health check only
   app.get("/", (req, res) => {
-    res.json({ service: "Gifted Monitor API", status: "running", uptime: Math.floor(process.uptime()) });
+    res.json({ service: "Hostify Monitor API", status: "running", uptime: Math.floor(process.uptime()) });
   });
   app.use((req, res) => {
     res.status(404).json({ error: "Endpoint not found" });
