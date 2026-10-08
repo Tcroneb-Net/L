@@ -41,6 +41,7 @@ export interface User {
   avatar?: string | null;
   monitor_limit?: number;
   monitor_count?: number;
+  balance?: number;
   notify_down?: boolean;
   notify_up?: boolean;
   created_at: string;

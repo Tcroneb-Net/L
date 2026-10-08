@@ -64,6 +64,7 @@ export default function Dashboard() {
 
         <section className="grid gap-3 lg:grid-cols-[1fr_1.4fr]">
           <div className="rounded-2xl border border-cyan-500/20 bg-gradient-to-br from-cyan-500/10 to-violet-500/10 p-5">
+            <div className="mb-4 flex items-center justify-between rounded-xl border border-white/10 bg-slate-950/5 px-3 py-2 dark:bg-white/5"><span className="text-xs font-medium text-muted">Available balance</span><span className="font-outfit text-lg font-bold">${Number(user?.balance ?? 0).toFixed(2)}</span></div>
             <div className="flex items-start justify-between gap-3"><div><p className="text-xs font-semibold uppercase tracking-wider text-cyan-600 dark:text-cyan-300">Starter plan</p><h2 className="mt-1 text-xl font-bold font-outfit">Unlock control room</h2></div><Zap className="text-cyan-500" size={20} /></div>
             <p className="mt-2 text-sm text-muted">Upgrade from $0.30/month for faster checks, longer history, and premium alert routing.</p>
             <Link to="/profile" className="btn mt-4 h-9 rounded-xl bg-slate-950 px-4 text-xs font-semibold text-white hover:bg-slate-800 dark:bg-white dark:text-slate-950">View plans <ArrowUpRight size={14} /></Link>

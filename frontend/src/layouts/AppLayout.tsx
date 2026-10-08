@@ -3,7 +3,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   LayoutDashboard, Monitor, User, Users, Settings,
-  MessageSquare, LogOut, Menu, X, Shield, ChevronDown
+  MessageSquare, LogOut, Menu, X, Shield, ChevronDown, Wallet
 } from "lucide-react";
 import { ModeToggle } from "@/components/ui";
 import { BrandMark } from "@/components/ui/BrandMark";
@@ -143,6 +143,16 @@ export default function AppLayout({ children }: AppLayoutProps) {
           <div className="flex items-center gap-2 shrink-0">
             <ModeToggle />
 
+            <Link
+              to="/profile"
+              className="hidden sm:flex items-center gap-2 rounded-xl border border-emerald-500/20 bg-emerald-500/10 px-3 py-2 text-xs font-semibold text-emerald-700 transition-colors hover:bg-emerald-500/15 dark:text-emerald-300"
+              title="Open billing and account balance"
+            >
+              <Wallet size={15} />
+              <span>Balance</span>
+              <span className="font-outfit">${Number(user?.balance ?? 0).toFixed(2)}</span>
+            </Link>
+
             {/* User chip (desktop) */}
             <div className="hidden md:flex items-center gap-2 pl-2 border-l border-line">
               <div className="flex items-center gap-2">
@@ -226,6 +236,10 @@ export default function AppLayout({ children }: AppLayoutProps) {
 
               {/* User footer */}
               <div className="px-4 py-4 border-t border-line shrink-0">
+                <Link to="/profile" onClick={() => setMobileOpen(false)} className="mb-3 flex items-center justify-between rounded-2xl border border-emerald-500/20 bg-emerald-500/10 px-3 py-3 text-emerald-700 dark:text-emerald-300">
+                  <span className="flex items-center gap-2 text-sm font-semibold"><Wallet size={16} /> Account balance</span>
+                  <span className="font-outfit text-sm font-bold">${Number(user?.balance ?? 0).toFixed(2)}</span>
+                </Link>
                 <div className="flex items-center gap-3 px-3 py-2 mb-2">
                   {user?.avatar ? (
                     <img src={user.avatar} alt={user.name} className="w-8 h-8 rounded-full object-cover" />
