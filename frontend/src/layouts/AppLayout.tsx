@@ -269,7 +269,7 @@ export default function AppLayout({ children }: AppLayoutProps) {
           </div>
           <p className="text-[11px] text-muted">
             {(() => { const y = new Date().getFullYear(); return y === 2026 ? `© ${y}` : `© 2026–${y}`; })()}{" "}
-            <a href="https://me.gifted.co.ke" target="_blank" rel="noopener noreferrer" className="text-emerald-500 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors font-medium">Gifted Tech</a>
+            <a href="/" className="text-emerald-500 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors font-medium">Hostify Monitor</a>
             {" "}· All rights reserved.
           </p>
         </div>

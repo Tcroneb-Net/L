@@ -35,7 +35,7 @@ const sections = [
   {
     icon: Gavel,
     title: "6. Limitation of Liability",
-    content: "Hostify Monitor and Gifted Tech shall not be liable for any indirect, incidental, special, or consequential damages arising from your use of the Service, including missed downtime alerts.",
+    content: "Hostify Monitor shall not be liable for any indirect, incidental, special, or consequential damages arising from your use of the Service, including missed downtime alerts.",
     aos: "fade-left",
   },
   {
@@ -100,8 +100,8 @@ export default function Terms() {
                     For questions about these terms, contact us at{" "}
                     <a href="/contact" className="text-emerald-500 hover:underline">our contact page</a>{" "}
                     or email{" "}
-                    <a href="mailto:maurice@gifted.co.ke" className="text-emerald-500 hover:underline">
-                      maurice@gifted.co.ke
+                    <a href="mailto:support@top.co.zw" className="text-emerald-500 hover:underline">
+                      support@top.co.zw
                     </a>.
                   </p>
                 )}

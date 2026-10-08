@@ -1,7 +1,7 @@
 {
-  "name": "gifted-monitor-backend",
+  "name": "hostify-monitor-backend",
   "version": "2.0.0",
-  "description": "Gifted Monitor — Node.js API backend with multi-DB support",
+  "description": "Hostify Monitor — Node.js API backend with multi-DB support",
   "main": "index.js",
   "type": "commonjs",
   "scripts": {
@@ -10,7 +10,7 @@
     "build": "cd ../frontend && npm ci && npm run build",
     "start:prod": "npm run build && node index.js"
   },
-  "author": "GiftedTech",
+  "author": "Hostify Zimbabwe",
   "license": "MIT",
   "dependencies": {
     "axios": "^1.6.2",

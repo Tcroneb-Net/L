@@ -41,11 +41,7 @@ export default function About() {
           <div data-aos="fade-right" data-aos-duration="600">
             <h2 className="text-2xl font-bold font-outfit mb-3">Who We Are</h2>
             <p className="text-muted leading-relaxed text-sm">
-              Hostify Monitor is a product of{" "}
-              <a href="https://gifted.co.ke" target="_blank" rel="noopener noreferrer" className="text-emerald-500 hover:underline font-medium">
-                Gifted Tech
-              </a>{" "}
-              — a software development studio focused on building practical, well-crafted tools for developers and businesses.
+              Hostify Monitor is proudly built in Zimbabwe for teams everywhere — a practical, well-crafted tool for developers and businesses.
               We're a small team with a big belief: that monitoring your infrastructure shouldn't require an enterprise contract or a PhD in DevOps.
             </p>
           </div>

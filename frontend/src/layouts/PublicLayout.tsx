@@ -224,7 +224,7 @@ export default function PublicLayout({ children }: PublicLayoutProps) {
           </div>
           <p className="text-xs text-muted text-center">
             {(() => { const y = new Date().getFullYear(); return y === 2026 ? `© ${y}` : `© 2026–${y}`; })()}{" "}
-            <a href="https://me.gifted.co.ke" target="_blank" rel="noopener noreferrer" className="text-emerald-500 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors font-medium">Gifted Tech</a>
+            <Link to="/" className="text-emerald-500 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors font-medium">Hostify Monitor</Link>
             {" "}· All rights reserved.
           </p>
         </div>

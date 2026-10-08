@@ -25,7 +25,7 @@ process.on("SIGTERM", () => shutdown("SIGTERM"));
 async function start() {
   await initDB();
   server = app.listen(config.PORT, "0.0.0.0", () => {
-    console.log(`\n🚀 Gifted Monitor API live on port ${config.PORT}`);
+    console.log(`\n🚀 Hostify Monitor API live on port ${config.PORT}`);
     console.log(`🔁 Ping check every ${config.PING_CHECK_INTERVAL_SECS}s`);
     console.log(`📌 Min ping interval: ${config.MIN_PING_INTERVAL_MINS} mins\n`);
     startPingEngine();

@@ -44,6 +44,14 @@
 html { overflow-x: clip; }
 body { @apply bg-background text-main font-sans; }
 
+@keyframes hero-drift { 0%, 100% { transform: translate3d(0, 0, 0) scale(1); } 50% { transform: translate3d(20px, -14px, 0) scale(1.05); } }
+@keyframes hero-drift-reverse { 0%, 100% { transform: translate3d(0, 0, 0) scale(1); } 50% { transform: translate3d(-18px, 16px, 0) scale(0.96); } }
+.hero-grid { position: absolute; inset: 0; opacity: .34; background-image: linear-gradient(rgba(125,211,252,.08) 1px, transparent 1px), linear-gradient(90deg, rgba(125,211,252,.08) 1px, transparent 1px); background-size: 44px 44px; mask-image: linear-gradient(to bottom, black, transparent 90%); }
+.hero-orb { position: absolute; border-radius: 9999px; filter: blur(1px); pointer-events: none; }
+.hero-orb-one { width: 28rem; height: 28rem; top: -12rem; right: 8%; background: radial-gradient(circle, rgba(34,211,238,.2), transparent 68%); animation: hero-drift 10s ease-in-out infinite; }
+.hero-orb-two { width: 22rem; height: 22rem; bottom: -11rem; left: 8%; background: radial-gradient(circle, rgba(129,140,248,.22), transparent 68%); animation: hero-drift-reverse 12s ease-in-out infinite; }
+@media (prefers-reduced-motion: reduce) { .hero-orb-one, .hero-orb-two { animation: none; } }
+
 .main { @apply max-w-[90%] 2xl:max-w-[1280px] mx-auto; }
 .layout { @apply max-w-[90%] md:max-w-[700px] mx-auto; }
 .center { @apply flex items-center justify-center; }
